@@ -10,6 +10,10 @@ public class StringMethods {
         Scanner sc = new Scanner(System.in);
         String myString = sc.nextLine();
 
+        while (myString.isEmpty()){
+            System.out.println("Please, enter a valird input");
+        }
+
         sc.close();
 
         //Remove spaces between words 
