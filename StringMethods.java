@@ -10,9 +10,12 @@ public class StringMethods {
         Scanner sc = new Scanner(System.in);
         String myString = sc.nextLine();
 
-        while (myString.isEmpty()){
+        if (myString.isEmpty()){
             System.out.println("Please, enter a valird input");
+
+            myString = sc.nextLine();
         }
+
 
         sc.close();
 
