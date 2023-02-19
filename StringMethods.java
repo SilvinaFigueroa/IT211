@@ -4,7 +4,8 @@ public class StringMethods {
     public static void main(String args[]) {
 
         // String myString = "";
-  
+
+        
         Scanner sc = new Scanner(System.in);
         String myString = sc.next();
 
@@ -28,11 +29,8 @@ public class StringMethods {
         newPass = newPass.replace('o', '_');
         newPass = newPass.replace('u', ')');
 
-        // Convert ever other character in uppercase
-        for (int i = 0; i < newPass.length(); i += 2) {
-            newPass.toUpperCase();
-        }
 
         System.out.println(newPass);
+
     }
 }
