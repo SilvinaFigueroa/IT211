@@ -5,11 +5,15 @@ public class StringMethods {
 
         // String myString = "";
 
+        System.out.println("Let's convert your full name in a Password! \n\nPlease, input your full name ");
         
         Scanner sc = new Scanner(System.in);
-        String myString = sc.next();
+        String myString = sc.nextLine();
 
         sc.close();
+
+        //Remove spaces between words 
+        myString = myString.replaceAll("\\s", "");
 
         // convert String to character array by using toCharArray
         char[] reverse = myString.toCharArray();
