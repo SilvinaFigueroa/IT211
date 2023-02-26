@@ -27,7 +27,7 @@ class dog extends animal {
 
 class JindoDog extends dog {
 
-    String oring;
+    private String oring;
 
     public JindoDog(String name, int age, String orign) {
         super(name, age);
