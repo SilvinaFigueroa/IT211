@@ -10,6 +10,8 @@ class exeption {
 
         System.out.println("In try 1");
         nums [10] = 25; 
+
+        //After the error (array out of bound) the rest of the try block stop and goes directly to the catch
         System.out.println("In try 2");
 
     }   
