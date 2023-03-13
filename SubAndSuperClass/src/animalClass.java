@@ -1,8 +1,7 @@
 
-
 public class animalClass {
-     protected String name;
-     protected int age;
+    protected String name;
+    protected int age;
 
     public String getName() {
         return name;
@@ -20,9 +19,8 @@ public class animalClass {
         this.age = age;
     }
 
-    animalClass(String name, int age){
+    animalClass(String name, int age) {
 
     }
 
-    }
-
+}
