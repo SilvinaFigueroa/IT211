@@ -1,6 +1,4 @@
 
-
-
 public class doraemonPocket {
     public static void main(String[] args){
 
