@@ -1,15 +1,13 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class storageClass implements storageInterface {
 
-    // Variable to initialize an array of string that will be a pocket
-    private String pockets[] = new String[5];
+    // Variable to initialize an array list of string that will be a pocket
+    ArrayList<String> pockets = new ArrayList<String>();
 
     // Constructor - how I want to initialize my class object -
 
     storageClass() {
-        // initialize the array by filling it with empty strings -
-        Arrays.fill(pockets, "empty");
 
     }
 
@@ -18,42 +16,19 @@ public class storageClass implements storageInterface {
 
     @Override
     public void addItem(String itemName) {
-        int itemIndex = -1;
-
-        for (int index = 0; index < pockets.length; index++) {
-            if (pockets[index] == "empty") {
-                itemIndex = index;
-                break;
-            }
-        }
-
-        if (itemIndex != -1) {
-            pockets[itemIndex] = itemName;
-            System.out.println(itemName + " was added to the pocket " + (itemIndex + 1));
-        }
-
-        else {
-
-            System.out.println("The 4D Pocket is full, sorry...we couldn't add " + itemName);
-        }
+        pockets.add(itemName);
 
     }
 
     @Override
     public void removeItem(String itemName) {
-        
-        int itemIndex = -1;
 
-        for (int index = 0; index < pockets.length; index++) {
-            if (pockets[index] == itemName) {
-                itemIndex = index;
-                break;
-            }
-        }
+        int itemIndex = pockets.indexOf(itemName);
 
         if (itemIndex != -1) {
-            pockets[itemIndex] = "empty";
-            System.out.println(itemName + " removed from pocket " + (itemIndex + 1));
+            pockets.remove(itemIndex);
+
+            System.out.println(itemName + " removed from pocket ");
         }
 
         else {
@@ -70,21 +45,12 @@ public class storageClass implements storageInterface {
             if (itemName != "empty")
                 System.out.println(itemName);
         }
-       
+
     }
 
     @Override
     public int getNumItems() {
-        int numItems = 0;
-        // Increment the numItems value every time we find an item that is not empty -
-        for (int i = 0; i < pockets.length; i++) {
-            if (pockets[i] != "empty") {
-                numItems = numItems + 1;
-            }
-            // the method in the interface set this returt to an int, so we can't add a
-            // print statement
-        }
-        return numItems;
+        return pockets.size();
     }
 
 }
