@@ -8,7 +8,7 @@ class TicTacToeDemo {
         
         // Test a TIE
 
-        System.out.println("\n------------------\n");
+        System.out.println("\n------------------");
         System.out.println("Game Board1 starts");
         System.out.println("------------------\n");
 
